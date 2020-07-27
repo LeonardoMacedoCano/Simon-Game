@@ -16,3 +16,16 @@ body {
   border-radius: 250px;
   box-shadow: 2px 2px 15px #4d4d4d;
 }
+
+#center {
+  z-index: 1;
+  top: 110px;
+  width: 250px;
+  height: 250px;
+  margin: 0 auto;
+  position: relative;
+  background-color: #ddd;
+  border: 15px solid #404040;
+  border-radius: 50%;
+  owerflow: hidden;
+}
