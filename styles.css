@@ -6,3 +6,13 @@
 body {
   background-color: #bbb;
 }
+
+#simonMain {
+  width: 500px;
+  height: 500px;
+  margin: 0 auto;
+  margin-top: 30px;
+  background: #404040;
+  border-radius: 250px;
+  box-shadow: 2px 2px 15px #4d4d4d;
+}
