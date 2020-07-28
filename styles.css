@@ -39,3 +39,43 @@ body {
   -ms-user-select: none;
   user-select: none;
 }
+
+.btnSeq {
+  display: flex;
+  box-sizing: border-box;
+  border: 2rem solid #181818;
+  width: 50%;
+  height: 50%;
+  background-color: antiquewhite;
+  opacity: 0.80;
+  align-items: center;
+  justify-content: center;
+  color: white;
+  font-size: 10rem;
+  text-shadow: 0 0 1px grey;
+  cursor: default;
+}
+
+#red {
+  background-color: #FF0A0A;
+  color: #f30a0a;
+  border-radius: 0 100% 0 0;
+}
+
+#green {
+  background-color: #00E800;
+  color: #00dd00;
+  border-radius: 100% 0 0 0;
+}
+
+#blue {
+  background-color: #3BB9FF;
+  color: #3badf2;
+  border-radius: 0 0 100% 0;
+}
+
+#yellow {
+  background-color: #FFD300;
+  color: #f3c700;
+  border-radius: 0 0 0 100%;
+}
