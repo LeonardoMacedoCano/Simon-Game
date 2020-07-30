@@ -175,13 +175,31 @@ body {
   font-family: Digital;
 }
 
-#btnStart {
+#btnStart, #btnStrict {
   width: 4rem;
   height: 4rem;
   cursor: default;
-  margin-top: 2rem;
-  background-color: #FF0A0A;
   border: 0.5rem solid #212121;
   border-radius: 100%;
   box-shadow: 1px 3px 2px #444, inset -1px -1px 0 #444;
+}
+
+#btnStart {
+  margin-top: 2rem;
+  background-color: #FF0A0A;
+}
+
+#btnStrict{
+  background-color: #FFD300;
+}
+
+#strictLight {
+  width: 1.5rem;
+  height: 1.5rem;
+  border-radius: 100%;
+  border: 0.25rem solid #1D1F20;
+  background-color: #430710;
+  margin-bottom: 0.5rem;
+  box-shadow: inset -1px -1px 0 #666;
+  box-sizing: border-box;
 }
