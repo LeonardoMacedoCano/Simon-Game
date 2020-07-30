@@ -144,3 +144,28 @@ body {
   flex-direction: column;
   font-size: 2rem;
 }
+
+.count {
+  color: #333;
+  height: 6rem;
+  width: 80%;
+  font-size: 4rem;
+  overflow: hidden;
+  display: flex;
+  vertical-align: middle;
+  justify-content: center;
+  align-items: center;
+  font-family: helvetica;
+  box-sizing: border-box;
+  margin-top: 0.75rem;
+  background: #430710;
+  border-radius: 1rem;
+  border: 1rem solid #1D1F20;
+  box-shadow: inset -1px -1px 0 #444;
+}
+
+.count > span {
+  color: #680b19;
+  font-size: 5rem;
+  font-family: Digital;
+}
