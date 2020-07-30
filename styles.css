@@ -1,5 +1,10 @@
 @import url(https://fonts.googleapis.com/css?family=Rubik:900);
 
+@font-face {
+  font-family: Digital;
+  src: url(https://s3-us-west-2.amazonaws.com/s.cdpn.io/507450/digital-subset.ttf);
+}
+
 * {
   margin: 0;
   padding: 0;
