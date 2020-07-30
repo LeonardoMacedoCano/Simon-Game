@@ -1,4 +1,5 @@
 @import url(https://fonts.googleapis.com/css?family=Rubik:900);
+
 * {
   margin: 0;
   padding: 0;
@@ -118,4 +119,11 @@ body {
   text-align: center;
   font-family: 'Rubik', monospace;
   position: absolute;
+}
+
+#controlBtns {
+  height: 60%;
+  width: 100%;
+  background-color: #c5c0bd;
+  border-top: 0.5rem solid #c5c0bd;
 }
