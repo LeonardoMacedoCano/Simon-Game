@@ -127,3 +127,11 @@ body {
   background-color: #c5c0bd;
   border-top: 0.5rem solid #c5c0bd;
 }
+
+#middleRow {
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  height: 50%;
+  width: 100%;
+}
