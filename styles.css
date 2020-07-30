@@ -150,7 +150,7 @@ body {
   font-size: 2rem;
 }
 
-.count {
+#count {
   color: #333;
   height: 6rem;
   width: 80%;
@@ -169,8 +169,19 @@ body {
   box-shadow: inset -1px -1px 0 #444;
 }
 
-.count > span {
+#count > span {
   color: #680b19;
   font-size: 5rem;
   font-family: Digital;
+}
+
+#btnStart {
+  width: 4rem;
+  height: 4rem;
+  cursor: default;
+  margin-top: 2rem;
+  background-color: #FF0A0A;
+  border: 0.5rem solid #212121;
+  border-radius: 100%;
+  box-shadow: 1px 3px 2px #444, inset -1px -1px 0 #444;
 }
