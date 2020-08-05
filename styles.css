@@ -214,3 +214,48 @@ body {
   justify-content: center;
   box-sizing: border-box;
 }
+
+#bottomRow > label {
+  height: 3rem;
+  width: 6rem;
+  font-size: 3rem;
+  position: relative;
+  outline: none;
+  box-sizing: border-box;
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
+}
+
+#btnPower {
+  display: none;
+}
+
+#btnPower ~ label:before,
+#btnPower ~ label:after {
+  top: 0;
+  left: 0;
+  height: 3rem;
+  content: ' ';
+  cursor: pointer;
+  position: absolute;
+  border-radius: 3rem;
+  box-sizing: border-box;
+  background-color: #00911C;
+}
+
+#btnPower ~ label:before {
+  width: 6rem;
+  background-color: #555;
+  border: 0.5rem solid black;
+}
+
+#btnPower ~ label:after {
+  width: 3rem;
+  border: 0.5rem solid black;
+}
+
+#btnPower:checked ~ label:after {
+  left: 3.5rem;
+}
