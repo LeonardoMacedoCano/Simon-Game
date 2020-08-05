@@ -215,6 +215,11 @@ body {
   box-sizing: border-box;
 }
 
+#bottomRow > span {
+  margin: 0 1rem;
+  font-size: 2rem;
+}
+
 #bottomRow > label {
   height: 3rem;
   width: 6rem;
