@@ -204,3 +204,13 @@ body {
   box-shadow: inset -1px -1px 0 #666;
   box-sizing: border-box;
 }
+
+#bottomRow {
+  height: 50%;
+  width: 100%;
+  display: flex;
+  align-content: center;
+  align-items: center;
+  justify-content: center;
+  box-sizing: border-box;
+}
