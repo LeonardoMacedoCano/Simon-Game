@@ -59,8 +59,7 @@ body {
   color: white;
   font-size: 10rem;
   text-shadow: 0 0 1px grey;
-  cursor: default;
-
+  cursor: pointer;
 }
 
 #red {
@@ -179,7 +178,7 @@ body {
 #btnStart, #btnStrict {
   width: 4rem;
   height: 4rem;
-  cursor: default;
+  cursor: pointer;
   border: 0.5rem solid #212121;
   border-radius: 100%;
   box-shadow: 1px 3px 2px #444, inset -1px -1px 0 #444;
