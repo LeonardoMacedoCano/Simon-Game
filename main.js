@@ -19,6 +19,10 @@ document.addEventListener('DOMContentLoaded', function(){
         var numLevel = ("00" + simonGame.level).slice(-3);
         inputCount.value = numLevel;
         inputCount.style.opacity = "1";
+      },
+      off: function(){
+        inputCount.value = "888";
+        inputCount.style.opacity = "0.6";
       }
     };
 
@@ -26,8 +30,7 @@ document.addEventListener('DOMContentLoaded', function(){
     if (this.checked){
       displayLevel.on();
     }else{
-      document.getElementById('count').value = "888";
-      document.getElementById('count').style.opacity = "0.6";
+      displayLevel.off();
     }
   })
 })
