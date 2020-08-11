@@ -1,5 +1,10 @@
+var simon = function(){
+
+}
+
 document.addEventListener('DOMContentLoaded', function(){
   var
+    simonGame = new simon(),
     btnPower = document.getElementById('btnPower'),
     btnStart = document.getElementById('btnStart'),
     btnStrict = document.getElementById('btnStrict');
