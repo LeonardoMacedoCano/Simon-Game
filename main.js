@@ -33,6 +33,9 @@ document.addEventListener('DOMContentLoaded', function(){
     },
 
     colorBtn ={
+      click: function(e){
+        console.log('e = ' + e.target.id);
+      },
       addClick: function(){
         for(var i = 0; i < btnSeq.length; i++){
           btnSeq[i].addEventListener('click', this.click);
