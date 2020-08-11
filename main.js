@@ -23,12 +23,17 @@ document.addEventListener('DOMContentLoaded', function(){
       hide: function(){
         inputCount.value = "888";
         inputCount.style.opacity = "0.6";
+      },
+      update: function(){
+        var numLevel = ("00" + simonGame.level).slice(-3);
+        inputCount.value = numLevel;
       }
     };
 
   btnPower.addEventListener('click', function(){
     function startGame(){
       simonGame.init();
+      displayLevel.update();
     }
 
     if (this.checked){
