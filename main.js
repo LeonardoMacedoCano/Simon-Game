@@ -37,6 +37,11 @@ document.addEventListener('DOMContentLoaded', function(){
         for(var i = 0; i < btnSeq.length; i++){
           btnSeq[i].addEventListener('click', this.click);
         }
+      },
+      removeClick: function(){
+        for(var i = 0; i < btnSeq.length; i++){
+          btnSeq[i].removeEventListener('click', this.click);
+        }
       }
     }
 
