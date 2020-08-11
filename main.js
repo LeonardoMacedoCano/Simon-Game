@@ -27,10 +27,16 @@ document.addEventListener('DOMContentLoaded', function(){
     };
 
   btnPower.addEventListener('click', function(){
+    function startGame(){
+      simonGame.init();
+    }
+
     if (this.checked){
       displayLevel.show();
+      btnStart.addEventListener('click', startGame);
     }else{
       displayLevel.hide();
+      btnStart.removeEventListener('click', startGame);
     }
   })
 })
