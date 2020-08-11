@@ -9,11 +9,13 @@ var simon = function(){
 
 document.addEventListener('DOMContentLoaded', function(){
   var
-    simonGame = new simon(),
-    btnPower = document.getElementById('btnPower'),
-    btnStart = document.getElementById('btnStart'),
-    btnStrict = document.getElementById('btnStrict'),
+    simonGame  = new simon(),
+    btnPower   = document.getElementById('btnPower'),
+    btnStart   = document.getElementById('btnStart'),
+    btnStrict  = document.getElementById('btnStrict'),
+    btnSeq     = document.getElementsByClassName('btnSeq'),
     inputCount = document.getElementById('count'),
+
     displayLevel ={
       show: function(){
         var numLevel = ("00" + simonGame.level).slice(-3);
@@ -28,12 +30,21 @@ document.addEventListener('DOMContentLoaded', function(){
         var numLevel = ("00" + simonGame.level).slice(-3);
         inputCount.value = numLevel;
       }
-    };
+    },
+
+    colorBtn ={
+      addClick: function(){
+        for(var i = 0; i < btnSeq.length; i++){
+          btnSeq[i].addEventListener('click', this.click);
+        }
+      }
+    }
 
   btnPower.addEventListener('click', function(){
     function startGame(){
       simonGame.init();
       displayLevel.update();
+      colorBtn.addClick();
     }
 
     if (this.checked){
