@@ -15,12 +15,12 @@ document.addEventListener('DOMContentLoaded', function(){
     btnStrict = document.getElementById('btnStrict'),
     inputCount = document.getElementById('count'),
     displayLevel ={
-      on: function(){
+      show: function(){
         var numLevel = ("00" + simonGame.level).slice(-3);
         inputCount.value = numLevel;
         inputCount.style.opacity = "1";
       },
-      off: function(){
+      hide: function(){
         inputCount.value = "888";
         inputCount.style.opacity = "0.6";
       }
@@ -28,9 +28,9 @@ document.addEventListener('DOMContentLoaded', function(){
 
   btnPower.addEventListener('click', function(){
     if (this.checked){
-      displayLevel.on();
+      displayLevel.show();
     }else{
-      displayLevel.off();
+      displayLevel.hide();
     }
   })
 })
