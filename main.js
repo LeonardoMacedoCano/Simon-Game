@@ -4,7 +4,12 @@ var simon = function(){
   this.init = function(){
     this.level = 1;
     this.randomNumColors = [];
-  }
+  };
+
+  this.randomColorGenerator = function(){
+    var randomNumber = Math.floor(Math.random()*4)+1;
+    this.randomNumColors.push(randomNumber);
+  };
 }
 
 document.addEventListener('DOMContentLoaded', function(){
