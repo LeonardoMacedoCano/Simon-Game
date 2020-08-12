@@ -1,5 +1,17 @@
 var simon = function(){
   this.level = 0;
+  this.indexUser = 0;
+
+  this.numColors ={
+    1: "green",
+    2: "red",
+    3: "yellow",
+    4: "blue",
+    green: 1,
+    red: 2,
+    yellow: 3,
+    blue: 4
+  }
 
   this.init = function(){
     this.level = 1;
