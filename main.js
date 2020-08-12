@@ -22,6 +22,16 @@ var simon = function(){
     var randomNumber = Math.floor(Math.random()*4)+1;
     this.randomNumColors.push(randomNumber);
   };
+
+  this.correctSequence = function(e){
+    var diff = true;
+
+    if (this.numColors[e.target.id] === this.randomNumColors[this.indexUser]){
+      diff = false;
+      return !diff;
+    }
+    return !diff;
+  };
 }
 
 document.addEventListener('DOMContentLoaded', function(){
@@ -51,7 +61,7 @@ document.addEventListener('DOMContentLoaded', function(){
 
     colorBtn ={
       click: function(e){
-        console.log('e = ' + e.target.id);
+
       },
       addClick: function(){
         for(var i = 0; i < btnSeq.length; i++){
