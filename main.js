@@ -1,6 +1,7 @@
 var simon = function(){
   this.level = 0;
   this.indexUser = 0;
+  this.interval;
 
   this.numColors ={
     1: "green",
@@ -33,7 +34,7 @@ var simon = function(){
     setTimeout(function(){
       document.getElementById(color).style.opacity = 0.6;
     }, 350);
-  }
+  };
 
   this.correctSequence = function(e){
     var diff = true;
@@ -43,6 +44,27 @@ var simon = function(){
       return !diff;
     }
     return !diff;
+  };
+
+  this.playSequence = function(){
+    var
+      i    = 0,
+      self = this,
+      colorSequence;
+
+    this.indexUser = 0;
+    clearInterval(this.interval);
+    this.randomColorGenerator();
+
+    this.interval = setInterval(function(){
+      colorSequence = self.numColors[self.randomNumColors[i]];
+      self.lightUp(colorSequence);
+      i++;
+
+      if(i === self.randomNumColors.length){
+        clearInterval(self.interval);
+      }
+    }, 1000);
   };
 }
 
@@ -92,6 +114,8 @@ document.addEventListener('DOMContentLoaded', function(){
       simonGame.init();
       displayLevel.update();
       colorBtn.addClick();
+
+      setTimeout(function(){simonGame.playSequence();},200);
     }
 
     if (this.checked){
