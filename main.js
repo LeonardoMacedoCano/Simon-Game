@@ -1,6 +1,7 @@
 var simon = function(){
   this.level = 0;
   this.indexUser = 0;
+  this.correctColor = true;
   this.interval;
 
   this.numColors ={
@@ -95,7 +96,14 @@ document.addEventListener('DOMContentLoaded', function(){
 
     colorBtn ={
       click: function(e){
-
+        if (simonGame.correctSequence(e)){
+          simonGame.correctColor = true;
+          simonGame.lightUp(e);
+          simonGame.indexUser++;
+        }else{
+          simonGame.correctColor = false;
+          simonGame.lightUp(e);
+        }
       },
       addClick: function(){
         for(var i = 0; i < btnSeq.length; i++){
