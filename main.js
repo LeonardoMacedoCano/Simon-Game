@@ -149,8 +149,10 @@ document.addEventListener('DOMContentLoaded', function(){
       displayLevel.show();
       btnStart.addEventListener('click', startGame);
     }else{
+      simonGame.level = 0;
       displayLevel.hide();
       btnStart.removeEventListener('click', startGame);
+      colorBtn.removeClick();
     }
   })
 })
