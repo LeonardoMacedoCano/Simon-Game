@@ -23,6 +23,18 @@ var simon = function(){
     this.randomNumColors.push(randomNumber);
   };
 
+  this.lightUp = function(e){
+    var color = typeof e == "string" ? e : e.target.id;
+
+    setTimeout(function(){
+      document.getElementById(color).style.opacity = 1;
+    }, 0);
+
+    setTimeout(function(){
+      document.getElementById(color).style.opacity = 0.6;
+    }, 350);
+  }
+
   this.correctSequence = function(e){
     var diff = true;
 
