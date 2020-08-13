@@ -47,6 +47,22 @@ var simon = function(){
     return !diff;
   };
 
+  this.enableColorBtns = function(e){
+    var
+      pointerStyle,
+      btnSeq = document.getElementsByClassName('btnSeq');
+
+    if (e){
+      pointerStyle = "auto";
+    }else{
+      pointerStyle = "none";
+    }
+
+    for(var i = 0; i < btnSeq.length; i++){
+      btnSeq[i].style.pointerEvents = pointerStyle;
+    }
+  }
+
   this.playSequence = function(){
     var
       i    = 0,
@@ -57,6 +73,8 @@ var simon = function(){
     clearInterval(this.interval);
     this.randomColorGenerator();
 
+    this.enableColorBtns(false);
+
     this.interval = setInterval(function(){
       colorSequence = self.numColors[self.randomNumColors[i]];
       self.lightUp(colorSequence);
@@ -64,6 +82,7 @@ var simon = function(){
 
       if(i === self.randomNumColors.length){
         clearInterval(self.interval);
+        self.enableColorBtns(true);
       }
     }, 1000);
   };
