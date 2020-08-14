@@ -134,25 +134,24 @@ document.addEventListener('DOMContentLoaded', function(){
           btnSeq[i].removeEventListener('click', this.click);
         }
       }
-    }
+    };
 
   btnPower.addEventListener('click', function(){
-    function startGame(){
-      simonGame.init();
-      displayLevel.update();
-      colorBtn.addClick();
-
-      setTimeout(function(){simonGame.playSequence();},200);
-    }
-
     if (this.checked){
       displayLevel.show();
-      btnStart.addEventListener('click', startGame);
     }else{
       simonGame.level = 0;
       displayLevel.hide();
-      btnStart.removeEventListener('click', startGame);
       colorBtn.removeClick();
+    }
+  })
+
+  btnStart.addEventListener('click', function(){
+    if (btnPower.checked){
+      simonGame.init();
+      displayLevel.update();
+      colorBtn.addClick();
+      simonGame.playSequence();
     }
   })
 })
