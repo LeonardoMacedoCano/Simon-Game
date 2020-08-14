@@ -107,10 +107,6 @@ document.addEventListener('DOMContentLoaded', function(){
       hide: function(){
         inputCount.value = "888";
         inputCount.style.opacity = "0.6";
-      },
-      update: function(){
-        var numLevel = ("00" + simonGame.level).slice(-3);
-        inputCount.value = numLevel;
       }
     },
 
@@ -125,11 +121,11 @@ document.addEventListener('DOMContentLoaded', function(){
             if (simonGame.level === simonGame.lastLevel){
               alert("Parabéns! você atingiu o último nível.");
               simonGame.level = 0;
-              displayLevel.update();
+              displayLevel.show();
             }else{
               simonGame.level++;
               simonGame.playSequence();
-              displayLevel.update();
+              displayLevel.show();
             }
           }
 
@@ -166,7 +162,7 @@ document.addEventListener('DOMContentLoaded', function(){
   btnStart.addEventListener('click', function(){
     if (btnPower.checked){
       simonGame.init();
-      displayLevel.update();
+      displayLevel.show();
       colorBtn.addClick();
       simonGame.playSequence();
     }
