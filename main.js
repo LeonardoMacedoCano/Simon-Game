@@ -1,5 +1,6 @@
 var simon = function(){
   this.level = 0;
+  this.lastLevel = 2;
   this.indexUser = 0;
   this.correctColor = true;
   this.interval;
@@ -119,6 +120,19 @@ document.addEventListener('DOMContentLoaded', function(){
           simonGame.correctColor = true;
           simonGame.lightUp(e);
           simonGame.indexUser++;
+
+          if (simonGame.indexUser === simonGame.level){
+            if (simonGame.level === simonGame.lastLevel){
+              alert("Parabéns! você atingiu o último nível.");
+              simonGame.level = 0;
+              displayLevel.update();
+            }else{
+              simonGame.level++;
+              simonGame.playSequence();
+              displayLevel.update();
+            }
+          }
+
         }else{
           simonGame.correctColor = false;
           simonGame.lightUp(e);
