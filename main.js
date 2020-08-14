@@ -1,6 +1,6 @@
 var simon = function(){
   this.level = 0;
-  this.lastLevel = 2;
+  this.lastLevel = 20;
   this.indexUser = 0;
   this.correctColor = true;
   this.interval;
@@ -136,6 +136,9 @@ document.addEventListener('DOMContentLoaded', function(){
         }else{
           simonGame.correctColor = false;
           simonGame.lightUp(e);
+          simonGame.level = 0;
+          displayLevel.hide();
+          colorBtn.removeClick();
         }
       },
       addClick: function(){
