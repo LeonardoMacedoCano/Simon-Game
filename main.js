@@ -41,19 +41,15 @@ var simon = function(){
   };
 
   this.playAudio = function(color){
-    var
-      audio,
-      audioKey;
+    var audio;
 
     if (this.correctColor === true){
-      audioKey = color;
+      audio = document.getElementById(color + "Audio");
     }else{
-      audioKey = "fail";
+      audio = document.getElementById("failAudio");
     }
 
-    audio = document.getElementById(audioKey + "Audio");
     audio.play();
-
     setTimeout(function(){
       audio.pause();
     }, 600);
