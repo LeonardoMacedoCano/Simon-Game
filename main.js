@@ -29,6 +29,8 @@ var simon = function(){
   this.lightUp = function(e){
     var color = typeof e == "string" ? e : e.target.id;
 
+    this.playAudio(color);
+
     setTimeout(function(){
       document.getElementById(color).style.opacity = 1;
     }, 0);
@@ -37,6 +39,25 @@ var simon = function(){
       document.getElementById(color).style.opacity = 0.6;
     }, 350);
   };
+
+  this.playAudio = function(color){
+    var
+      audio,
+      audioKey;
+
+    if (this.correctColor === true){
+      audioKey = color;
+    }else{
+      audioKey = "fail";
+    }
+
+    audio = document.getElementById(audioKey + "Audio");
+    audio.play();
+
+    setTimeout(function(){
+      audio.pause();
+    }, 600);
+  }
 
   this.correctSequence = function(e){
     var diff = true;
@@ -161,6 +182,10 @@ document.addEventListener('DOMContentLoaded', function(){
 
   btnStart.addEventListener('click', function(){
     if (btnPower.checked){
+      if (simonGame.correctColor === false){
+        simonGame.correctColor = true;
+      }
+
       simonGame.init();
       displayLevel.show();
       colorBtn.addClick();
