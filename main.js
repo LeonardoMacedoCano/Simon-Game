@@ -136,6 +136,12 @@ document.addEventListener('DOMContentLoaded', function(){
 
           if (simonGame.indexUser === simonGame.level){
             if (simonGame.level === simonGame.lastLevel){
+              var audio = document.getElementById("winAudio");
+
+              audio.play();
+              setTimeout(function() {
+                audio.pause();
+              }, 600);
               alert("Parabéns! você atingiu o último nível.");
               simonGame.level = 0;
               displayLevel.show();
